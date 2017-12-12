@@ -1,0 +1,29 @@
+SET FOREIGN_KEY_CHECKS = 0;
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `phone` VARCHAR(20) NOT NULL,
+  `image` VARCHAR(255) NOT NULL,
+  `owner` BOOLEAN NOT NULL,
+  `sitter` BOOLEAN NOT NULL,
+  `rank` DOUBLE
+);
+
+DROP TABLE IF EXISTS `stay`;
+CREATE TABLE `stay` (
+  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `ownerId` INT NOT NULL,
+  `sitterId` INT NOT NULL,
+  `dogs` VARCHAR(255) NOT NULL,
+  `start` DATE NOT NULL,
+  `end` DATE NOT NULL,
+  `text` TEXT NOT NULL,
+  `rating` TINYINT NOT NULL,
+  CONSTRAINT `stayOwnerId` FOREIGN KEY (`ownerId`) REFERENCES `user`(`id`),
+  CONSTRAINT `staySitterId` FOREIGN KEY (`sitterId`) REFERENCES `user`(`id`)
+);
+
+SET FOREIGN_KEY_CHECKS = 1;

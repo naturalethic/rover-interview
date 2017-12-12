@@ -1,3 +1,67 @@
+# Preamble
+
+I tried to touch lots of areas with this solution.
+
+* Unit testing
+* Api structure
+* Parameter validation
+* React
+* SQL
+* Documentation
+
+# Installation and Setup
+
+Developed and tested on:
+
+```
+Node 9.3.0
+MySQL 5.7.20
+Chrome 62
+```
+
+Install packages:
+
+```
+$ yarn
+```
+
+Configure your app:
+
+1. Copy `server.config.example.js` to `server.config.js`.
+1. Copy `client.config.example.js` to `client.config.js`.
+1. Modify them as needed
+
+Seed database:
+
+#### Make sure that the database with the chosen name exists.
+
+```
+$ yarn seed
+```
+
+Run api server:
+
+```
+$ yarn api
+```
+
+Front end dev server:
+
+```
+$ yarn dev
+```
+
+# Notes
+
+* While this implementation makes no alterations to the data, the Overall Sitter Rank must be re-calculated and updated
+  to the database whenever a review is added or changed, or any of the components of the sitter score change (their name).
+
+# Bugs
+
+* The test runner eventually runs out of connections because they are not being closed properly.
+
+----
+
 # Rover Coding Project
 
 Rover.com was destroyed in a terrible Amazon and GitHub accident.

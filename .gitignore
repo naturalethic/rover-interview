@@ -1,2 +1,8 @@
 *~
 *.swp
+yarn.lock
+node_modules
+dist
+.cache
+server.config.js
+client.config.js

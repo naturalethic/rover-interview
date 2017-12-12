@@ -1,0 +1,46 @@
+{
+  "name": "interview-naturalethic",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:roverjobs/interview-naturalethic.git",
+  "author": "Joshua Kifer",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "dev": "parcel view/index.html",
+    "api": "node api",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "doc": "jsdoc -d doc lib data",
+    "seed": "node data/seed.js"
+  },
+  "standard": {
+    "globals": [
+      "test",
+      "URLSearchParams"
+    ]
+  },
+  "engines": {
+    "node": ">=9.2.1"
+  },
+  "dependencies": {
+    "ajv": "^5.5.1",
+    "axios": "^0.17.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "csvdata": "^1.4.0",
+    "jest": "^21.2.1",
+    "jsdoc": "^3.5.5",
+    "koa": "^2.4.1",
+    "koa-logger": "^3.1.0",
+    "koa-router": "^7.3.0",
+    "koa2-cors": "^2.0.5",
+    "mysql2": "^1.5.1",
+    "parcel-bundler": "^1.2.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "semantic-ui-css": "^2.2.12",
+    "semantic-ui-react": "^0.77.1",
+    "standard": "^10.0.3"
+  }
+}
